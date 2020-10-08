@@ -23,7 +23,7 @@ print(longitude)
 long_direction=img['GPS GPSLongitudeRef']
 
 #geopy get position:
-geolocator = Nominatim()
+geolocator = Nominatim(user_agent='demo_of_gnss_help')
 position0 = geolocator.reverse('%s,%s'%(latitude,longitude))#字符格式才显示中国
 print(position0.address)
 
